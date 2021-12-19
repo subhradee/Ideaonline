@@ -242,7 +242,7 @@ const Mainindex = () => {
                             id="slideLeft"
                             type="button"
                             onClick={(e) => {
-                                document.getElementById("tagsec").scrollLeft += 150;
+                                document.getElementById("tagsec").scrollLeft -= 150;
                             }}
                         >
                             <img id="pre" src="./img/pre.png" alt="" />
@@ -305,7 +305,7 @@ const Mainindex = () => {
                             id="slideRight"
                             type="button"
                             onClick={() => {
-                                document.getElementById("tagsec").scrollLeft -= 150;
+                                document.getElementById("tagsec").scrollLeft += 150;
                             }}
                         >
                             <img id="nxt" src="./img/nxt.png" alt="" />
