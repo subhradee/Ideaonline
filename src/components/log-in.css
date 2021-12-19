@@ -1,0 +1,228 @@
+*, ::after, ::before {
+    box-sizing: border-box;    
+    padding: 0;
+    margin: 0;
+
+}
+
+a {
+    color: #002fff;
+    text-decoration: underline;
+    font-family: var(--bs-font-sans-serif);
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: var(--bs-font-sans-serif);
+}
+.small{
+    font-size: small;
+}
+p.small{
+    margin-bottom: 2rem;
+}
+:root{
+    
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+}
+
+.section {
+    margin-right: 3rem;
+    margin-left: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.container{
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    --bs-gutter-x: 0 ;
+    --bs-gutter-y: 0 ;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    margin-left: calc(var(--bs-gutter-x) * -.5);
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 12px 12px 22px grey;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+    overflow: hidden;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.headings{
+    padding-right: 3rem ;
+    padding-left: 3rem ;
+    padding-top: 3rem ;
+}
+.headings2{
+    padding-right: 3rem ;
+}
+h1{
+    padding-top: 1rem ;
+    padding-bottom: 1rem ;
+    font-weight: bold;
+    font-size: calc(1.375rem + 1.5vw);
+    font-family: var(--bs-font-sans-serif);
+  
+}
+.form::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+.form:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #0066ff;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+}
+h4{
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    font-family: var(--bs-font-sans-serif);
+    font-size: calc(1.275rem + .3vw);
+
+}
+.h4{
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight:normal;
+    line-height: 1.2;
+    font-family: var(--bs-font-sans-serif);
+    font-size: calc(1rem + .3vw);
+
+}
+.form{
+    margin-top: 1rem ;
+    margin-bottom: 1rem ;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: .75rem;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+        border-top-color: rgb(206, 212, 218);
+        border-right-color: rgb(206, 212, 218);
+        border-bottom-color: rgb(206, 212, 218);
+        border-left-color: rgb(206, 212, 218);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn1{
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    }
+.btn1:hover{
+    background: white;
+    border: 1px solid;
+    color: black;
+
+}
+.btn2{
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    }
+.btn2:hover{
+    background: white;
+    border: 1px solid;
+    color: black;
+
+}
+
+@media (min-width: 1200px)
+{ .container{
+        max-width: 1140px;
+    }
+    .headings2{
+        padding-left: 3rem;
+    }
+}
+@media (min-width: 300px)
+{
+    .headings2{
+        padding-left: 3rem;
+    }
+}
+@media (min-width: 576px){
+    .container{max-width: 540px;}
+    .headings2{
+        padding-left: 8rem;
+    }
+    
+}
+
+@media (min-width: 768px)
+{ .container{
+        max-width: 720px;
+    }
+    .headings2{
+        padding-left: 14rem;
+    }
+    
+}
+@media (min-width: 992px)
+{ .container{
+        max-width: 960px;
+    }
+    .flexcol-1{
+        flex: 0 0 auto;
+        width: 41.66666667%;
+    }
+    .flexcol-2{
+        flex: 0 0 auto;
+        width: 58.33333333%;
+    }
+    .headings2{
+        padding-left: 3rem ;
+    }
+    h1{
+        padding-left: 0rem;
+    }
+}
+.orange{
+    background-color: #ffffff; 
+    /* jodi tr ichha hoy eta orange kore dia dekbi kirom lagche */
+}
+
