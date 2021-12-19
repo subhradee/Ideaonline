@@ -323,7 +323,7 @@ img {
 }
 .wholetag {
 	display: flex;
-	align-items: center;	
+	align-items: center;
 }
 
 .tagele {
@@ -360,8 +360,7 @@ img {
 	background-color: rgb(252, 173, 120);
 }
 #slideLeft,
-#slideRight
-{
+#slideRight {
 	height: 2.7rem;
 	width: 4rem;
 }
@@ -491,24 +490,36 @@ img {
 	background-color: var(--postcolor2);
 }
 
-.imgtitle
-{
+.imgtitle {
 	display: flex;
 	align-items: center;
 }
-.buttonsec
-{
+.buttonsec {
 	width: 20%;
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
 }
-.buttonsec button
-{
+.buttonsec1 {
+	width: 20%;
+	display: flex;
+	font-size: 0.7rem;
+	align-items: center;
+	justify-content: space-evenly;
+	/* flex-wrap: wrap; */
+}
+.buttonsec button {
 	height: 3rem;
 	width: 5rem;
 	border-radius: 30px;
+	font-weight: bolder;
+	margin: 0.5rem;
+}
+.buttonsec1 button {
+	height: 3rem;
+	width: 5rem;
+	border-radius: 50%;
 	font-weight: bolder;
 	margin: 0.5rem;
 }
@@ -547,7 +558,7 @@ img {
 } */
 .like,
 .comment {
-	 width: 40rem; 
+	width: 40rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
