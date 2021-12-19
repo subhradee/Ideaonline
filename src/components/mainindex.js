@@ -1,6 +1,6 @@
 import React from 'react'
 import  './styles.css'
-import { BiSearch,BiMenu,BiHome } from "react-icons/bi";
+import { BiSearch,BiMenu,BiHome,BiChevronDown,BiUser,BiMessageRounded,BiCompass,BiBell,BiBookmark,BiLogOut } from "react-icons/bi";
 
 const Mainindex = () => {
 
@@ -117,9 +117,9 @@ const Mainindex = () => {
 
                         <div class="nav__dropdown">
                             <a href="#" class="nav__link">
-                                <i class='bx bx-user nav__icon'></i>
+                                <i class='bx bx-user nav__icon'><BiUser className="nav__icon"/></i>
                                 <span class="nav__name">Profile</span>
-                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'><BiChevronDown className="nav__icon nav__dropdown-icon"/></i>
                             </a>
 
                             <div class="nav__dropdown-collapse">
@@ -132,7 +132,7 @@ const Mainindex = () => {
                         </div>
 
                         <a href="#" class="nav__link">
-                            <i class='bx bx-message-rounded nav__icon'></i>
+                            <i class='bx bx-message-rounded nav__icon'><BiMessageRounded className="nav__icon"/></i>
                             <span class="nav__name">Messages</span>
                         </a>
                     </div>
@@ -142,9 +142,9 @@ const Mainindex = () => {
 
                         <div class="nav__dropdown">
                             <a href="#" class="nav__link">
-                                <i class='bx bx-bell nav__icon'></i>
+                                <i class='bx bx-bell nav__icon'><BiBell/></i>
                                 <span class="nav__name">Notifications</span>
-                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'><BiChevronDown className="nav__icon nav__dropdown-icon"/></i>
                             </a>
 
                             <div class="nav__dropdown-collapse">
@@ -159,11 +159,11 @@ const Mainindex = () => {
                         </div>
 
                         <a href="#" class="nav__link">
-                            <i class='bx bx-compass nav__icon'></i>
+                            <i class='bx bx-compass nav__icon'><BiCompass className="nav__icon"/></i>
                             <span class="nav__name">Explore</span>
                         </a>
                         <a href="#" class="nav__link">
-                            <i class='bx bx-bookmark nav__icon'></i>
+                            <i class='bx bx-bookmark nav__icon'><BiBookmark className="nav__icon"/></i>
                             <span class="nav__name">Saved</span>
                         </a>
                     </div>
@@ -171,7 +171,7 @@ const Mainindex = () => {
             </div>
 
             <a href="#" class="nav__link nav__logout">
-                <i class='bx bx-log-out nav__icon'></i>
+                <i class='bx bx-log-out nav__icon'><BiLogOut className="nav__icon"/></i>
                 <span class="nav__name">Log Out</span>
             </a>
         </nav>
