@@ -241,7 +241,7 @@ const Mainindex = () => {
                         <div
                             id="slideLeft"
                             type="button"
-                            onClick={(e) => {
+                            onClick={() => {
                                 document.getElementById("tagsec").scrollLeft -= 150;
                             }}
                         >
