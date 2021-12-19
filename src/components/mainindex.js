@@ -77,9 +77,24 @@ const Mainindex = () => {
 						<div className="header__search">
 							<input
 								type="search"
-								placeholder="Search"
+								placeholder="Type to search..."
 								className="header__input form-control"
+								list="datalistOptions"
 							/>
+							{/* <datalist id="datalistOptions">
+                                <option value="San Francisco">
+                                <option value="New York">
+                                <option value="Seattle">
+                             <option value="Los Angeles">
+                                     <option value="Chicago">
+                                            </datalist> */}
+							<datalist id="datalistOptions">
+								<option value="San Francisco" />
+								<option value="New York" />
+								<option value="Seattle" />
+								<option value="Los Angeles" />
+								<option value="Chicago" />
+							</datalist>
 							<i className="bx bx-search header__icon">
 								<BiSearch className="header__icon" />
 							</i>
