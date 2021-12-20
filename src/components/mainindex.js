@@ -1,5 +1,7 @@
 import React from "react";
 import "./styles.css";
+import axios from "axios";
+import { useState, useEffect } from "react";
 import {
 	BiSearch,
 	BiMenu,
@@ -16,60 +18,7 @@ import Post from "./post";
 import { Link } from "react-router-dom";
 
 const Mainindex = () => {
-	// const buttonRight = await document.getElementById("slideRight");
-	// const buttonLeft = await document.getElementById("slideLeft");
-
-	// buttonRight.onclick = function () {
-	// 	document.getElementById("tagsec").scrollLeft += 150;
-	// };
-	// buttonLeft.onclick = function () {
-	// 	document.getElementById("tagsec").scrollLeft -= 150;
-	// };
-
-	// var icon = document.getElementById("toggleimg");
-	// const pre = document.getElementById("pre");
-	// const nxt = document.getElementById("nxt");
-	// const likeimg = document.getElementById("likeimg");
-	// icon.onclick = function () {
-	// 	document.body.classList.toggle("darktheme");
-
-	// 	if (document.body.classList.contains("darktheme")) {
-	// 		icon.src = "./img/sun.png";
-	// 		pre.src = "./img/prelight.png";
-	// 		nxt.src = "./img/nxtlight.png";
-	// 		likeimg.src = "./img/likelight.png";
-	// 	} else {
-	// 		icon.src = "./img/moon.png";
-	// 		pre.src = "./img/pre.png";
-	// 		nxt.src = "./img/nxt.png";
-	// 		likeimg.src = "./img/like.png";
-	// 	}
-	// };
-
-	// const showMenu = (headerToggle, navbarId) => {
-	// 	const toggleBtn = document.getElementById(headerToggle),
-	// 		nav = document.getElementById(navbarId);
-
-	// 	// Validate that variables exist
-	// 	if (headerToggle && navbarId) {
-	// 		toggleBtn.addEventListener("click", () => {
-	// 			// We add the show-menu class to the div tag with the nav__menu class
-	// 			nav.classList.toggle("show-menu");
-	// 			// change icon
-	// 			toggleBtn.classList.toggle("bx-x");
-	// 		});
-	// 	}
-	// };
-	// showMenu("header-toggle", "navbar");
-
-	// const linkColor = document.querySelectorAll(".nav__link");
-
-	// function colorLink() {
-	// 	linkColor.forEach((l) => l.classList.remove("active"));
-	// 	this.classList.add("active");
-	// }
-
-	// linkColor.forEach((l) => l.addEventListener("click", colorLink));
+	// const bh((l) => l.addEventListener("click", colorLink));
 
 	return (
 		<>
