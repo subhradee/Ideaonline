@@ -19,7 +19,16 @@ import { Link } from "react-router-dom";
 
 const Mainindex = () => {
 	// const bh((l) => l.addEventListener("click", colorLink));
-
+	const [state, setstate] = useState([]);
+	useEffect(() => {
+		async function getData() {
+			const res = await axios.get(`http://127.0.0.1:8000/blogs/`);
+			setstate(res.data);
+			console.log(res.data);
+			return "";
+		}
+		getData();
+	}, []);
 	return (
 		<>
 			<header className="header">
@@ -131,13 +140,13 @@ const Mainindex = () => {
 									<span className="nav__name">Home</span>
 								</a>
 
-								<div class="nav__dropdown">
-									<a href="#" class="nav__link">
-										<i class="bx bx-user nav__icon">
+								<div className="nav__dropdown">
+									<a href="#" className="nav__link">
+										<i className="bx bx-user nav__icon">
 											<BiUser className="nav__icon" />
 										</i>
-										<span class="nav__name">Profile</span>
-										<i class="bx bx-chevron-down nav__icon nav__dropdown-icon">
+										<span className="nav__name">Profile</span>
+										<i className="bx bx-chevron-down nav__icon nav__dropdown-icon">
 											<BiChevronDown className="nav__icon nav__dropdown-icon" />
 										</i>
 									</a>
@@ -157,24 +166,24 @@ const Mainindex = () => {
 									</div>
 								</div>
 
-								<a href="#" class="nav__link">
-									<i class="bx bx-message-rounded nav__icon">
+								<a href="#" className="nav__link">
+									<i className="bx bx-message-rounded nav__icon">
 										<BiMessageRounded className="nav__icon" />
 									</i>
-									<span class="nav__name">Messages</span>
+									<span className="nav__name">Messages</span>
 								</a>
 							</div>
 
-							<div class="nav__items">
-								<h3 class="nav__subtitle">Menu</h3>
+							<div className="nav__items">
+								<h3 className="nav__subtitle">Menu</h3>
 
-								<div class="nav__dropdown">
-									<a href="#" class="nav__link">
-										<i class="bx bx-bell nav__icon">
+								<div className="nav__dropdown">
+									<a href="#" className="nav__link">
+										<i className="bx bx-bell nav__icon">
 											<BiBell />
 										</i>
-										<span class="nav__name">Notifications</span>
-										<i class="bx bx-chevron-down nav__icon nav__dropdown-icon">
+										<span className="nav__name">Notifications</span>
+										<i className="bx bx-chevron-down nav__icon nav__dropdown-icon">
 											<BiChevronDown className="nav__icon nav__dropdown-icon" />
 										</i>
 									</a>
@@ -197,27 +206,27 @@ const Mainindex = () => {
 									</div>
 								</div>
 
-								<a href="#" class="nav__link">
-									<i class="bx bx-compass nav__icon">
+								<a href="#" className="nav__link">
+									<i className="bx bx-compass nav__icon">
 										<BiCompass className="nav__icon" />
 									</i>
-									<span class="nav__name">Explore</span>
+									<span className="nav__name">Explore</span>
 								</a>
-								<a href="#" class="nav__link">
-									<i class="bx bx-bookmark nav__icon">
+								<a href="#" className="nav__link">
+									<i className="bx bx-bookmark nav__icon">
 										<BiBookmark className="nav__icon" />
 									</i>
-									<span class="nav__name">Saved</span>
+									<span className="nav__name">Saved</span>
 								</a>
 							</div>
 						</div>
 					</div>
 
-					<a href="#" class="nav__link nav__logout">
-						<i class="bx bx-log-out nav__icon">
+					<a href="#" className="nav__link nav__logout">
+						<i className="bx bx-log-out nav__icon">
 							<BiLogOut className="nav__icon" />
 						</i>
-						<span class="nav__name">Log Out</span>
+						<span className="nav__name">Log Out</span>
 					</a>
 				</nav>
 			</div>
@@ -300,7 +309,10 @@ const Mainindex = () => {
 					</div>
 
 					<div className="postcontainer">
-						<Post />
+						{state.map((value, index, arr) => (
+							<Post value={value} />
+						))}
+						;
 					</div>
 				</div>
 			</main>
