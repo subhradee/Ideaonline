@@ -10,7 +10,7 @@ const Signup = () => {
                 <img src="	https://source.unsplash.com/720x1050/?social"  alt="Oops"/>
             </div>
             <div class=" flexcol-2 headings2 " >
-                <h1 style="font-weight: bold;">IDEA</h1>
+                <h1>IDEA</h1>
                 <h4>Create your account</h4>
                 <form>
                     <div>
