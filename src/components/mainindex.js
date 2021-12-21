@@ -144,10 +144,12 @@ const Mainindex = () => {
 									<a href="#" className="nav__link">
 										<i className="bx bx-user nav__icon">
 											<BiUser className="nav__icon" />
-										</i>
-										<span className="nav__name">Profile</span>
-										<i className="bx bx-chevron-down nav__icon nav__dropdown-icon">
-											<BiChevronDown className="nav__icon nav__dropdown-icon" />
+										</i>				
+
+										<span class="nav__name">Profile</span>
+										<i class="bx bx-chevron-down nav__icon nav__dropdown-icon">
+											<BiChevronDown className="bx bx-chevron-down nav__icon nav__dropdown-icon" />
+
 										</i>
 									</a>
 
