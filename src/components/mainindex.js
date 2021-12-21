@@ -138,7 +138,7 @@ const Mainindex = () => {
 										</i>
 										<span class="nav__name">Profile</span>
 										<i class="bx bx-chevron-down nav__icon nav__dropdown-icon">
-											<BiChevronDown className="nav__icon nav__dropdown-icon" />
+											<BiChevronDown className="bx bx-chevron-down nav__icon nav__dropdown-icon" />
 										</i>
 									</a>
 
