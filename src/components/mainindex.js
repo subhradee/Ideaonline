@@ -18,7 +18,28 @@ import Post from "./post";
 import { Link } from "react-router-dom";
 
 const Mainindex = () => {
-	// const bh((l) => l.addEventListener("click", colorLink));
+	const [user, setUser] = useState({
+		username: localStorage.getItem("username"),
+		email: null,
+		id: null,
+	});
+	useEffect(() => {
+		async function getUser() {
+			const res = await axios
+				.post("http://127.0.0.1:8000/userget/", {
+					username: localStorage.getItem("username"),
+				})
+				.then((response) => {
+					console.log(response);
+					setUser((prev) => ({
+						...prev,
+						email: response.data.email,
+						id: response.data.id,
+					}));
+				});
+		}
+		getUser();
+	}, []);
 	const [state, setstate] = useState([]);
 	useEffect(() => {
 		async function getData() {
@@ -29,6 +50,7 @@ const Mainindex = () => {
 		}
 		getData();
 	}, []);
+
 	return (
 		<>
 			<header className="header">
@@ -40,7 +62,7 @@ const Mainindex = () => {
 							className="header__logoimg"
 						/>
 						<a href="#" className="header__logo">
-							IDEAONLINE
+							{user.username}
 						</a>
 					</div>
 
@@ -222,7 +244,14 @@ const Mainindex = () => {
 						</div>
 					</div>
 
-					<a href="#" className="nav__link nav__logout">
+					<a
+						href="#"
+						className="nav__link nav__logout"
+						onClick={() => {
+							localStorage.removeItem("username");
+							window.location.reload();
+						}}
+					>
 						<i className="bx bx-log-out nav__icon">
 							<BiLogOut className="nav__icon" />
 						</i>
@@ -310,7 +339,7 @@ const Mainindex = () => {
 
 					<div className="postcontainer">
 						{state.map((value, index, arr) => (
-							<Post value={value} />
+							<Post value={value} key={index} />
 						))}
 						;
 					</div>
